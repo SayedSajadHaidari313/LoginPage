@@ -1,6 +1,7 @@
 // react == life cycle hook contain:
 
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 export function Posts() {
   const [isLoading, setIsLoading] = useState(false);
@@ -30,6 +31,8 @@ export function Posts() {
 //   posts.map((post) => console.log(post));
 return (
   <div>
+    <Link to="/">Dashboard</Link>
+
     {posts.map((post) => (
       <div key={post.id}>
         <h1>{post.title}</h1>
