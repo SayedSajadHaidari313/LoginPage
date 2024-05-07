@@ -10,7 +10,6 @@ export default function App() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  const [posts, setPosts] = useState();
 
   const {
     register,
