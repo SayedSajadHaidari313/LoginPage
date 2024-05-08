@@ -28,7 +28,6 @@ export function Posts() {
   if (isLoading || !posts){
       return <h1>Loading ...</h1>
   }
-//   posts.map((post) => console.log(post));
 return (
   <div>
     <Link to="/">Dashboard</Link>

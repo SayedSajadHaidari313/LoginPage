@@ -5,11 +5,24 @@ export const useAuthStore = create(
   persist(
     (set) => ({
       isLoggedIn: false,
-      user: null,
+      user: {
+        name: null,
+        lastname: null,
+        address: {
+          primary: "ksdksdk",
+        },
+      },
       token: null,
+      sdksdkskd : "sdksdksdksdkds",
       login: ({ user, token }) =>
-        set(() => ({ isLoggedIn: true, user, token })),
-      removeAllBears: () => set({ bears: 0 }),
+        set((state) => ({
+          isLoggedIn: true,
+          user: {
+            ...state.user,
+            name: user,
+          },
+          token,
+        })),
       logout: () => set({ isLoggedIn: false, user: null, token: null }),
     }),
     {

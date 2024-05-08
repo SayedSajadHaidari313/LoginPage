@@ -4,8 +4,7 @@ import { useAuthStore } from "../../store/auth.store";
 import { Button } from "react-bootstrap";
 
 export function Dashboard() {
- const {isLoggedIn, user, token, logout} = useAuthStore()
- console.log({isLoggedIn, user, token})
+ const {token, logout} = useAuthStore()
   return (
     <>
       {token ? (
